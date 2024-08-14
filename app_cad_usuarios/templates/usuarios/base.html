@@ -18,7 +18,7 @@
   <body>
     <nav
       style="background-color: darkolivegreen !important"
-      class="navbar navbar-light bg-light"
+      class="navbar navbar-expand-lg navbar-light bg-light"
     >
       <div class="container-fluid">
         <a class="navbar-brand" href="{% url 'home' %}">
@@ -29,13 +29,12 @@
             height="24"
             class="d-inline-block align-text-top"
           />
-
           Cadastre-me!
         </a>
       </div>
     </nav>
 
-    {% block conteudo %} {% endblock %}
+    <main class="container my-4">{% block conteudo %} {% endblock %}</main>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
