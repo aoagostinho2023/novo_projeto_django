@@ -74,26 +74,26 @@ WSGI_APPLICATION = 'projeto_cad_usuarios.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 """
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'db_projeto',
-        'USER': 'usr_projeto1',
-        'PASSWORD': 'pass_projeto',
-        'HOST': 'localhost',  # ou o endereço do servidor de banco de dados
-        'PORT': '3306',  # porta padrão do MySQL
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'banco_django_app',
+        'USER': 'aoagostinho',
+        'PASSWORD': 'lLAsD2fiaRBbiGMLnZmYqz4gCetNLyWw',
+        'HOST': 'dpg-cqugmrbv2p9s73a96ifg-a',  # ou o endereço do servidor de banco de dados
+        'PORT': '5432',  # porta padrão do MySQL
     }
 }
-"""
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
