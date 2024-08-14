@@ -1,5 +1,12 @@
 from django.shortcuts import render
 from .models import  Usuario
+from django.http import HttpResponse
+from django.core.management import call_command
+
+def run_migrations(request):
+    call_command('run_migrations')
+    return HttpResponse('Migrations complete.')
+
 
 # Create your views here.
 def home(request):
