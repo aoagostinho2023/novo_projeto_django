@@ -1,5 +1,6 @@
 gunicorn
 psycopg2
+requests
 asgiref==3.8.1
 blinker==1.7.0
 click==8.1.7
