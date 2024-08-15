@@ -15,6 +15,32 @@
     </tr>
     {% endfor %}
   </table>
-</div>
 
+  <h2>Enviar Mensagem via WhatsApp</h2>
+  <form method="post" action="{% url 'send_whatsapp_message' %}">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="phone_number" class="form-label">Número de Telefone:</label>
+      <input
+        type="text"
+        class="form-control"
+        id="phone_number"
+        name="phone_number"
+        placeholder="e.g., +5511999999999"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="message" class="form-label">Mensagem:</label>
+      <textarea
+        class="form-control"
+        id="message"
+        name="message"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+  </form>
+</div>
 {% endblock %}

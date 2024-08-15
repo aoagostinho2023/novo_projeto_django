@@ -31,6 +31,8 @@
           />
           Cadastre-se!
         </a>
+        <!-- Novo link para a página "Chat" -->
+        <a class="nav-link" href="{% url 'chat' %}">Chat</a>
       </div>
     </nav>
 
@@ -38,7 +40,11 @@
 
     <div style="text-align: center" class="container">
       <br />
+      {% if user_name %}
+      <h1>Olá, {{ user_name }}!</h1>
+      {% else %}
       <h1>Bem-vindos!</h1>
+      {% endif %}
       <img
         src="https://static.miraheze.org/projectsekaiwiki/thumb/9/93/Hatsune_Miku.png/630px-Hatsune_Miku.png"
         alt="Nutri Pyramid"
